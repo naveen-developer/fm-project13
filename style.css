@@ -1,0 +1,311 @@
+/* 1. Use a more-intuitive box-sizing model */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    font-family: "Red Hat Display", sans-serif;
+}
+
+/* 2. Remove default margin */
+*:not(dialog) {
+    margin: 0;
+}
+
+/* 3. Enable keyword animations */
+@media (prefers-reduced-motion: no-preference) {
+    html {
+        interpolate-size: allow-keywords;
+    }
+}
+
+body {
+    /* 4. Add accessible line-height */
+    line-height: 1.5;
+    /* 5. Improve text rendering */
+    -webkit-font-smoothing: antialiased;
+    background-color: #F6F6F6;
+}
+
+/* 6. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+/* 7. Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* 8. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+/* 9. Improve line wrapping */
+p {
+    text-wrap: pretty;
+}
+
+
+header a img {
+    margin: 4rem auto;
+}
+
+.faces {
+    display: flex;
+    justify-content: center;
+}
+
+section {
+    text-align: center;
+    display: grid;
+    gap: 2rem;
+    margin: 2rem;
+}
+
+.gc-container {
+    margin: 2rem 6rem;
+}
+
+h1 {
+    font-size: 2.5rem;
+    line-height: 1.1;
+    font-weight: 900;
+    padding-inline: 1rem;
+}
+
+button {
+    border-radius: 35px;
+    background-color: #855FB1;
+    padding: 1rem 3rem;
+    border: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.3rem;
+    max-width: 17rem;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #B18BDD;
+}
+
+.fame-btn {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.download-btn {
+    background-color: #4D96A9;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.download-btn span {
+    color: #8FE3F9;
+
+}
+
+button.download-btn:hover {
+    background-color: #71C0D4;
+}
+
+.download-purple-btn span {
+    color: #D9B8FF;
+    margin-left: 10px;
+}
+
+.emt-container {
+    background-image: linear-gradient(rgb(82 151 169 / 92%), rgba(82, 151, 169, 0.7)), url(./assets/mobile/image-footer.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-inline: 0;
+    margin-block-start: 20rem;
+    padding: 4rem 3rem;
+    color: #fff;
+    place-items: center;
+}
+
+.emt-title,
+.sm-title {
+    font-size: 2.8rem;
+    line-height: 1.1;
+    font-weight: 900;
+}
+
+.emt-subtitle {
+    font-size: 1.3rem;
+    line-height: 1.2;
+    font-weight: 500;
+    margin-block: 3rem;
+}
+
+
+.sm-sub-title,
+.sub-title {
+    color: #87879D;
+    font-size: 1.4rem;
+    line-height: 1.5;
+    font-weight: 600;
+    margin-block: 2rem;
+}
+
+
+
+.bm-title {
+    letter-spacing: 0.4rem;
+    text-transform: uppercase;
+    color: #4D96A9;
+    font-weight: 900;
+    font-size: 1.2rem;
+}
+
+.bm-container {
+    margin-block: 5rem;
+}
+
+.images-collage {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+.image {
+    border-radius: 10px;
+    width: 196px;
+    overflow: hidden;
+}
+
+.frame-01,
+.frame-02 {
+    border: 2px solid #D1D1DF;
+    width: 70px;
+    height: 70px;
+    margin: 1rem auto 4rem;
+    border-radius: 50%;
+    display: grid;
+    place-content: center;
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: #87879D;
+    position: relative;
+    background-color: #fff;
+}
+
+.frame-01::before,
+.frame-02::before {
+    content: '';
+    height: 180px;
+    width: 2px;
+    background: #D1D1DF;
+    position: absolute;
+    left: 48%;
+    bottom: 0;
+    z-index: -1;
+
+}
+
+.image-collage-cotainer {
+    margin-block-start: 17rem;
+    margin-block-end: 5rem;
+}
+
+.frame-02 {
+    top: -114px;
+}
+
+.gc-container .face-left,
+.gc-container .face-right {
+    display: none;
+}
+
+
+
+@media screen and (min-width:768px) {
+    .image {
+        width: 250px;
+    }
+
+    .bm-container {
+        margin-inline: 3.4rem;
+    }
+
+    .emt-container {
+        background-image: linear-gradient(rgb(82 151 169 / 92%), rgba(82, 151, 169, 0.7)), url(./assets/tablet/image-footer.jpg);
+    }
+}
+
+@media screen and (min-width:1040px) {
+
+    .emt-subtitle {
+        margin-block: 0rem;
+    }
+
+    .gc-container .face-left,
+    .gc-container .face-right {
+        display: block;
+    }
+
+    .gc-container {
+        display: flex;
+        gap: 1rem;
+        justify-content: space-around;
+    }
+
+    .gc-sub-container {
+        max-width: 33rem;
+    }
+
+    .sub-title {
+        margin-block: 2rem;
+    }
+
+    .faces {
+        display: none;
+
+    }
+
+    .bm-container {
+        max-width: 42rem;
+        margin: auto;
+    }
+
+    .emt-sub-container {
+        display: flex;
+        align-items: start;
+    }
+
+    .emt-sub-container h2,
+    .emt-sub-container p,
+    .emt-sub-container button {
+        max-width: 39rem;
+    }
+
+    .emt-title {
+        padding-inline: 2rem;
+        text-align: start;
+    }
+
+    .emt-subtitle {
+        padding-inline-end: 5rem;
+        text-align: start;
+    }
+}
